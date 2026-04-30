@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        :root {
+            --primary-bg: #fdfdfd;
+            --card-bg: #ffffff;
+            --accent-blue: #3498db;
+            --text-main: #2c3e50;
+            --text-muted: #7f8c8d;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            max-width: 400px;
+            width: 90%;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border: 1px solid #f0f0f0;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #eee;
+            margin-bottom: 24px;
+            border: 3px solid var(--accent-blue);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+
+        .bio {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: var(--accent-blue);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .links a:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <!-- Replace 'profile.jpg' with your photo filename -->
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+        
+        <h1>Your Name</h1>
+        
+        <p class="bio">
+            Hello! I'm a professional focused on delivering impactful solutions and 
+            continuously learning in my field. I enjoy bridging the gap between 
+            complex ideas and practical applications, always striving to contribute 
+            meaningfully to every project I undertake.
+        </p>
+
+        <div class="links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="mailto:email@example.com">Contact</a>
+        </div>
+    </div>
+
+</body>
+</html>
