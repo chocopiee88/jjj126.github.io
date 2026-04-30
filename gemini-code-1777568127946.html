@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Jeong | Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --nav-bg: rgba(15, 23, 42, 0.9);
+            --card-bg: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio {
+            max-width: 600px;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Experience & Education Cards */
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .card .subtitle {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card .date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Contact */
+        #contact {
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 2rem;
+        }
+
+        .contact-links a {
+            color: var(--text-secondary);
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            color: var(--text-secondary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            nav { padding: 1rem; }
+            nav a { margin: 0 0.5rem; font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <img src="ProfilePic.jpeg" alt="Joshua Jeong" class="profile-img">
+        <h1>Joshua Jeong</h1>
+        <div class="tagline">ACCOUNTING · FINANCE · TECHNOLOGY</div>
+        <p class="bio">
+            Accounting Student at Rutgers Business School · CPA Eligible by May 2027 · Data Analysis & Research
+        </p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="card">
+            <h3>Customer Service Associate</h3>
+            <div class="subtitle">Boom Boom Chicken</div>
+            <div class="date">Jan 2026 – Present | Edison, NJ</div>
+        </div>
+
+        <div class="card">
+            <h3>Research & Academic Assistant</h3>
+            <div class="subtitle">Rutgers Engineering School</div>
+            <div class="date">Sep 2023 – Dec 2025</div>
+        </div>
+
+        <div class="card">
+            <h3>Private SAT Tutor</h3>
+            <div class="subtitle">Freelance</div>
+            <div class="date">Mar 2016 – Present</div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+
+        <div class="card">
+            <h3>B.S. Accounting</h3>
+            <div class="subtitle">Rutgers Business School</div>
+            <p>GPA: 3.319 | CPA eligible May 2027</p>
+        </div>
+
+        <div class="card">
+            <h3>B.E. Industrial Engineering</h3>
+            <div class="subtitle">Rutgers School of Engineering</div>
+            <p>GPA: 3.24</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <span class="skill-tag">Microsoft Excel</span>
+            <span class="skill-tag">Access</span>
+            <span class="skill-tag">PowerPoint</span>
+            <span class="skill-tag">Word</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Accounting</span>
+            <span class="skill-tag">Research</span>
+            <span class="skill-tag">English (Fluent)</span>
+            <span class="skill-tag">Korean (Fluent)</span>
+            <span class="skill-tag">Spanish (Conversational)</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-links">
+            <a href="mailto:jeongjoshua8543@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/joshua-jeong-50a588309/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/chocopiee88" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> (732) 589-8543</p>
+            <p>Edison, New Jersey</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Joshua Jeong. Built with HTML/CSS.</p>
+    </footer>
+
+</body>
+</html>
